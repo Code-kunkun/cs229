@@ -23,7 +23,7 @@ def main(train_path, eval_path, pred_path):
     res = clf.predict(x_eval)
     
     accuracy = np.sum((res > 0.5) == y_eval)
-    print("accuracy = %d" %accuracy)
+    print("accuracy = {}%".format(accuracy))
     np.savetxt(pred_path, res > 0.5, fmt="%d")
     # *** END CODE HERE ***
 
@@ -66,7 +66,6 @@ class LogisticRegression(LinearModel):
             # End training
             if np.linalg.norm(self.theta - theta_old, ord=1) < self.eps: # 以第一范式为判定原则
                 break
-
 
         # *** END CODE HERE ***
 
