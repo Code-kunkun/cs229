@@ -57,10 +57,10 @@ def main(train_path, eval_path, pred_path):
     accuarcy = np.sum((res > 0.5) == y_eval)
 
     print('accuracy = {}%'.format(accuarcy))
-    util.plot(x_train, y_train, gda.all_theta, 'output/p01e_{}.png'.format(pred_path[-5]))
+    # util.plot(x_train, y_train, gda.all_theta, 'output/p01e_{}.png'.format(pred_path[-5]))
 
-    plot(x_eval, y_eval, theta_1=log_reg.theta, legend_1='logistic regression', theta_2=gda.all_theta, legend_2='GDA', title='Validation Set')
-    plt.savefig('output/constract_{}.png'.format(pred_path[-5]))
+    # plot(x_eval, y_eval, theta_1=log_reg.theta, legend_1='logistic regression', theta_2=gda.all_theta, legend_2='GDA', title='Validation Set')
+    # plt.savefig('output/constract_{}.png'.format(pred_path[-5]))
     # *** END CODE HERE ***
 
 
